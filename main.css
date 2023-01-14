@@ -115,7 +115,7 @@ body .video iframe {
   display: block;
   margin: auto;
   width: 66.66666666666666vw;
-  height: 50.01866368047778vw;
+  height: 41.66666666666666vw;
 }
 @media (max-width: 600px) {
   head p,
@@ -163,7 +163,7 @@ body .video iframe {
   head .video iframe,
   body .video iframe {
     width: 86vw;
-    height: 64.52407614781634vw;
+    height: 48.375vw;
   }
 }
 head .content2,
@@ -281,4 +281,13 @@ body .img5 {
 head .img6,
 body .img6 {
   grid-area: F;
+}
+@media (max-width: 600px) {
+  head .content3,
+  body .content3 {
+    display: grid;
+    grid-template-rows: 200px 300px 300px 400px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A A" "B C" "D F" "E E";
+  }
 }

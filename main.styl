@@ -30,9 +30,6 @@ body
   a
     display: inline-block
 
-  .menu, .nav, .main-block, .content, .text1, .text2, .image, .video
-    //border: solid 1px black
-
   .menu
     background-color: block-bg-color
     font-weight: bold
@@ -92,12 +89,11 @@ body
     marg(0px, 10px)
     padding-bottom: 5px
     iframe
-      //width="893" height="670"
       display: block
       margin: auto
       $wid = 1vw * 100 * (2 / 3)
       width: $wid
-      height: 1vw * (($wid * 670)/893)
+      height: 1vw * (($wid * 10)/16)
 
 
   @media (max-width: max-wid)
@@ -132,12 +128,9 @@ body
     .video iframe
       $wid = 1vw * 86
       width: $wid
-      height: 1vw * (($wid * 670)/893)
+      height: 1vw * (($wid * 9)/16)
 
-  // Page 2:
-
-  .content2, .image2, .text3, .text4, img
-    //border: solid 1px black
+  // font:
 
   .content2, .image2, .text3, .text4
     display grid
@@ -180,11 +173,10 @@ body
         width: 100%
         margin: 20px auto
 
-  // Page 3
+  // Blocks
 
   .content3, .img1, .img2, .img3, .img4, .img5, .img6
     display: grid
-    //border: solid 1px black
     object-fit: fill;
 
   .content3
@@ -218,3 +210,11 @@ body
 
   .img6
     grid-area: F
+
+  @media (max-width: max-wid)
+      .content3
+        display: grid
+        grid-template-rows: 200px 300px 300px 400px
+        grid-template-columns: 1fr 1fr
+        grid-template-areas:
+        "A A" "B C"	"D F" "E E"
